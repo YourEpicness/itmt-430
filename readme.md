@@ -1,6 +1,6 @@
 # Jeebe Diop
 
-![Me](images/me.jpg = 250x250 "Me")
+![Me](images/me.jpg "Me")
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang")
 
