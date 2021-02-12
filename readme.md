@@ -1,6 +1,6 @@
 # Jeebe Diop
 
-![Me](images/me.jpg "Me")
+![Me](images/me.jpg = 250x250 "Me")
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang")
 
@@ -18,4 +18,4 @@ Before COVID hit, I would practice Brazilian Jiu Jitsu in my spare time off camp
 
 ## Git tutorial
 
-![Git Tutorial](images/badge.png "Result")
+![Git Tutorial](images/git.PNG "Result")
