@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 set -e
 set -v
 
@@ -8,9 +8,9 @@ echo "mariadb-server mysql-server/root_password password $DBPASS" | sudo  debcon
 echo "mariadb-server mysql-server/root_password_again password $DBPASS" | sudo debconf-set-selections
 
 sudo apt-get update
-sudo apt-get install -y mariadb-server 
+sudo apt-get install -y mariadb-server
 
-# Enable the service 
+# Enable the service
 sudo systemctl enable mariadb.service
 
 # Inject the username and password for autologin later in a ~/.my.cnf file
@@ -33,7 +33,7 @@ sudo hostnamectl set-hostname sample-server
 # This section uses the user environment variables declared in packer json build template
 # #USERPASS and $BKPASS
 
-# chown the cloned github repo files so the user owns it 
+# chown the cloned github repo files so the user owns it
 ###############################################################################
 # Replace any occurance of 2021-team-sample with the name of your own team private repository #
 ###############################################################################
