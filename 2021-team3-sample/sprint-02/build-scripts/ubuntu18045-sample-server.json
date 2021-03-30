@@ -59,7 +59,7 @@
   "provisioners": [
     {
     "type": "file",
-    "source": "./id_rsa_2021-sampleteam-deploy-key",
+    "source": "./myrepo",
     "destination": "/home/vagrant/"
     },
     {
@@ -73,8 +73,8 @@
       "inline": [
         "mkdir -p /home/vagrant/.ssh",
         "mkdir -p /root/.ssh",
-        "chmod 600 /home/vagrant/id_rsa_2021-sampleteam-deploy-key",
-        "cp -v /home/vagrant/id_rsa_2021-sampleteam-deploy-key /home/vagrant/.ssh/",
+        "chmod 600 /home/vagrant/myrepo",
+        "cp -v /home/vagrant/myrepo /home/vagrant/.ssh/",
         "cp -v /home/vagrant/config /home/vagrant/.ssh/",
         "cp -v /home/vagrant/config /root/.ssh/",
         "git clone git@github.com:illinoistech-itm/2021-team-sample.git"
