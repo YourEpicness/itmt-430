@@ -1,8 +1,8 @@
 {
   "builders": [
     {
-      "name": "sample-server",
-      "vm_name": "sample-server",
+      "name": "itemsite-server",
+      "vm_name": "itemsite-server",
       "type": "virtualbox-iso",
       "boot_command": [
         "<esc><wait>",
@@ -44,7 +44,7 @@
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "guest_additions_mode": "disable",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",  
+      "virtualbox_version_file": ".vbox_version",
  "vboxmanage": [
         [
           "modifyvm",
@@ -55,7 +55,7 @@
 
     ]
   }],
- 
+
   "provisioners": [
     {
     "type": "file",
@@ -65,11 +65,11 @@
     {
       "type": "file",
       "source": "./config",
-      "destination": "/home/vagrant/"     
+      "destination": "/home/vagrant/"
     },
     {
       "type": "shell",
-      "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'", 
+      "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
         "mkdir -p /home/vagrant/.ssh",
         "mkdir -p /root/.ssh",
@@ -82,12 +82,12 @@
     },
     {
     "type": "shell",
-  "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'", 
+  "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
     "scripts": [
       "./provisioner-scripts/post_install_vagrant.sh",
       "./provisioner-scripts/post_install_mariadb-install.sh",
       "./provisioner-scripts/post_install_reactjs-app-and-dependencies.sh"],
-    "environment_vars": [ 
+    "environment_vars": [
       "WS1IP={{user `webserver-one-ip`}}",
       "DBPASS={{user `database-root-pw`}}",
       "ACCESSFROMIP={{user `database-access-range`}}",
@@ -100,8 +100,7 @@
  {
   "type": "vagrant",
  "keep_input_artifact": false,
- "output": "../build/{{.BuildName}}-{{.Provider}}-{{timestamp}}.box"  
+ "output": "../build/{{.BuildName}}-{{.Provider}}-{{timestamp}}.box"
  }
 ]
 }
-
