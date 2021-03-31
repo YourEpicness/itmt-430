@@ -5,6 +5,8 @@ output*/
 *.iso
 id_rsa*
 id_rsa.pub
+myrepo
+myrepo.pub
 *~
 .DS_Store
 variables.json
