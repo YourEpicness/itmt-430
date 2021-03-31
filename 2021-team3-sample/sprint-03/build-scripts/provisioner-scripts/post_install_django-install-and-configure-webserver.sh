@@ -18,7 +18,7 @@ python3 -m pip install mysqlclient
 
 ##############################################################################################
 # Inject all environment variables into a .my.cnf file
-# Here we can construct the .my.cnf file and append the value to the .my.cnf file we will 
+# Here we can construct the .my.cnf file and append the value to the .my.cnf file we will
 # create in the home directory
 ##############################################################################################
 echo -e "[client]" >> /home/vagrant/.my.cnf
@@ -38,12 +38,12 @@ python3 -m pip install django django-admin django-common
 django-admin startproject mysite
 
 ##############################################################################################
-# CHANGE THE VALUES ~/2021-team-sample TO YOUR TEAM REPO AND ADJUST THE PATH ACCORDINGLY     #
+# CHANGE THE VALUES ~/2021-team3-sample TO YOUR TEAM REPO AND ADJUST THE PATH ACCORDINGLY     #
 # Adjust the paths below in line 35-37, and 44 and 46                                        #
 ##############################################################################################
-sudo chown -R vagrant:vagrant ~/2021-team-sample
+sudo chown -R vagrant:vagrant ~/2021-team3-sample
 
-sudo cp -v /home/vagrant/2021-team-sample/sprint-03/code/django/settings.py /home/vagrant/mysite/mysite/
+sudo cp -v /home/vagrant/2021-team3-sample/sprint-03/code/django/settings.py /home/vagrant/mysite/mysite/
 
 ##############################################################################################
 # Using sed to replace the blank settings value with the secret key
@@ -55,12 +55,12 @@ sed -i "s/ALLOWED_HOSTS = []/ALLOWED_HOSTS = ['$WEBSERVERIP']/g" /home/vagrant/m
 ##############################################################################################
 # Create super user account from the ENV variables we passed in
 ##############################################################################################
-python3 manage.py createsuperuser --noinput 
+python3 manage.py createsuperuser --noinput
 
 ##############################################################################################
 # Copy systemd start script to runserver at boot
 ##############################################################################################
-sudo cp -v ~/2021-team-sample/sprint-03/code/django/django-server.service /lib/systemctl/system/
+sudo cp -v ~/2021-team3-sample/sprint-03/code/django/django-server.service /lib/systemctl/system/
 sudo systemctl enable django-server.service
 sudo systemctl start django-server.service
 
