@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 set -e
 set -v
 
@@ -8,9 +8,9 @@ echo "mysql-server/root_password password $DBPASS" | sudo  debconf-set-selection
 echo "mysql-server/root_password_again password $DBPASS" | sudo debconf-set-selections
 
 sudo apt-get update
-sudo apt-get install -y mysql-server 
+sudo apt-get install -y mysql-server
 
-# Enable and start the service 
+# Enable and start the service
 sudo systemctl enable mysql.service
 sudo systemctl start mysql.service
 
@@ -34,27 +34,27 @@ sudo hostnamectl set-hostname sample-server
 # This section uses the user environment variables declared in packer json build template
 # #USERPASS and $BKPASS
 
-# chown the cloned github repo files so the user owns it 
+# chown the cloned github repo files so the user owns it
 ###############################################################################
-# Replace any occurance of 2021-team-sample with the name of your own team private repository #
+# Replace any occurance of 2021-team3-sample with the name of your own team private repository #
 ###############################################################################
 
-sudo chown -R vagrant:vagrant ~/2021-team-sample
+sudo chown -R vagrant:vagrant ~/2021-team3-sample
 
 # Using sed to replace variables in the scripts with the ENV variables passed
-sed -i "s/\$ACCESSFROMIP/127.0.0.1/g" ~/2021-team-sample/sprint-02/code/db-samples/*.sql
-sed -i "s/\$USERPASS/$USERPASS/g" ~/2021-team-sample/sprint-02/code/db-samples/*.sql
-sed -i "s/\$MMIP/127.0.0.1/g" ~/2021-team-sample/sprint-02/code/db-samples/*.sql
+sed -i "s/\$ACCESSFROMIP/127.0.0.1/g" ~/2021-team3-sample/sprint-02/code/db-samples/*.sql
+sed -i "s/\$USERPASS/$USERPASS/g" ~/2021-team3-sample/sprint-02/code/db-samples/*.sql
+sed -i "s/\$MMIP/127.0.0.1/g" ~/2021-team3-sample/sprint-02/code/db-samples/*.sql
 # This script will create the database named posts in the mariadb server
-sudo mysql -u root < ~/2021-team-sample/sprint-02/code/db-samples/create-database.sql
+sudo mysql -u root < ~/2021-team3-sample/sprint-02/code/db-samples/create-database.sql
 # This script will create the table named comments
-sudo mysql -u root < ~/2021-team-sample/sprint-02/code/db-samples/create-table.sql
+sudo mysql -u root < ~/2021-team3-sample/sprint-02/code/db-samples/create-table.sql
 # This script will create the non-root user named worker and the user for replication
-sudo mysql -u root < ~/2021-team-sample/sprint-02/code/db-samples/create-user-with-permissions-mm.sql
+sudo mysql -u root < ~/2021-team3-sample/sprint-02/code/db-samples/create-user-with-permissions-mm.sql
 # This script will insert 3 sample records to the table
-sudo mysql -u root < ~/2021-team-sample/sprint-02/code/db-samples/insert-records.sql
+sudo mysql -u root < ~/2021-team3-sample/sprint-02/code/db-samples/insert-records.sql
 # This script will select * from comments and print the contents to the screen to make sure it all worked
-sudo mysql -u root < ~/2021-team-sample/sprint-02/code/db-samples/sample-select.sql
+sudo mysql -u root < ~/2021-team3-sample/sprint-02/code/db-samples/sample-select.sql
 
 # Enable Firewall
 # https://serverfault.com/questions/809643/how-do-i-use-ufw-to-open-ports-on-ipv4-only
