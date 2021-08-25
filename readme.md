@@ -4,7 +4,7 @@
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang" )
 
-@import "images/cncfmeme.jpeg" {width="50%" title="meme" alt="meme"}
+![CNCF Meme](images/cncfmeme.jpeg "Meme")
 
 ## Where are you from?
 
