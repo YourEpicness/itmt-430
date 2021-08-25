@@ -1,10 +1,10 @@
 # Jeebe Diop
 
-![Me](images/me.jpg "Me" | width=100)
+![Me](images/me.jpg "Me")
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang" )
 
-![CNCF Meme](images/cncfmeme.jpeg "Meme" | width=100)
+![CNCF Meme](images/cncfmeme.jpeg "Meme")
 ## Where are you from?
 
 From the suburbs of Atlanta, Georgia (25 miles from Atlanta).
