@@ -4,7 +4,7 @@
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang")
 
-![CNCF Meme](images/cncfmeme,jpeg "Meme")
+![CNCF Meme](images/cncfmeme.jpeg "Meme")
 ## Where are you from?
 
 From the suburbs of Atlanta, Georgia (25 miles from Atlanta).
