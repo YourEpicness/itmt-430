@@ -1,10 +1,8 @@
 # Jeebe Diop
 
-![Me](images/me.jpg "Me")
-
+<img src="images/me.jpg" width="50%" alt="me">
 ![Carefree avatar](images/avatar.jpg "Avatar Aang" )
-
-<img src="images/cncfmeme.jpeg" width="50%">
+<img src="images/cncfmeme.jpeg" width="50%" alt="meme">
 
 ## Where are you from?
 
