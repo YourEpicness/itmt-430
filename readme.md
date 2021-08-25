@@ -10,7 +10,7 @@ From the suburbs of Atlanta, Georgia (25 miles from Atlanta).
 
 ## IT Interest
 
- I first became interested in IT when I got interested in penetration testing. I wanted to learn cybersecurity just to learn how to hack. Now, I am more interested in project management aspect of IT and web development. I am currently exploring all aspects that IT has to offer to find something I enjoy doing or am good at.
+I first became interested in IT when I got interested in penetration testing. I am now focused on full stack development with automated infrastructure deployment. My goal is to automate myself out of infrastructure so I can go back to developing in peace. I mainly use Kubernetes for developing distributed systems.
 
 ## Something Interesting About You
 
