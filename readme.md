@@ -4,7 +4,7 @@
 
 ![Carefree avatar](images/avatar.jpg "Avatar Aang" )
 
-![CNCF Meme](images/cncfmeme.jpeg "Meme")
+<img src="images/cncfmeme.jpeg" width="50%">
 
 ## Where are you from?
 
